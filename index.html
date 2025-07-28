@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Oi</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffe9f9, #fff);
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      color: #ff69b4;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .msg {
+      margin-top: 20px;
+      font-size: 18px;
+      background: #fff0f6;
+      padding: 15px 25px;
+      border-radius: 20px;
+      border: 2px dashed #ff69b4;
+      max-width: 300px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+  </style>
+</head>
+<body>
+  <div class="msg" id="mensagem">Clique no botão para ver o que ele quer te dizer!</div>
+  <button onclick="mostrarMensagem()">Eu sou o botão</button>
+
+  <script>
+    const mensagens = [
+      "Já Bebeu água hoje? Bora se cuidar pai",
+      "Mãos de Tijolo.",
+      "Tem os gatos mais belos de toda a região!",
+      "Uma das pessoas mais incríveis de todo planeta terra 🌍",
+      "Não vou mentir, mas sua presença melhora o dia em 120%!",
+      "Gosto muito de passar meus dias com você!",
+      "Edward Cullen brasileira",
+      "Obrigado, por me conceder a honra de compartilhar momentos incriveis com você.",
+      "Maior farmadora de aura de Rodeio."
+    ];
+
+    function mostrarMensagem() {
+      const index = Math.floor(Math.random() * mensagens.length);
+      document.getElementById("mensagem").innerText = mensagens[index];
+    }
+  </script>
+</body>
+</html>
